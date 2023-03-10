@@ -40,7 +40,7 @@ import io.protostuff.Tag;
 /**
  * Configuration for vertica sources.
  */
-@SourceType(value = "verticaARP", label = "vertica", uiConfig = "verticaarp-layout.json", externalQuerySupported = true)
+@SourceType(value = "verticaARP", label = "Vertica", uiConfig = "verticaarp-layout.json", externalQuerySupported = true)
 public class VerticaConf extends AbstractArpConf<VerticaConf> {
   private static final String ARP_FILENAME = "arp/implementation/vertica-arp.yaml";
   private static final ArpDialect ARP_DIALECT =
@@ -88,7 +88,7 @@ public class VerticaConf extends AbstractArpConf<VerticaConf> {
   @Tag(8)
   @NotMetadataImpacting
   @JsonIgnore
-  @DisplayMetadata(label = "Grant External Query access (External Query allows creation of VDS from a Vertica query. Learn more here: https://docs.dremio.com/data-sources/external-queries.html#enabling-external-queries)")
+  @DisplayMetadata(label = "Grant External Query access (Learn more here: https://docs.dremio.com/data-sources/external-queries.html#enabling-external-queries)")
   public boolean enableExternalQuery = false;
 
   @Tag(9)
